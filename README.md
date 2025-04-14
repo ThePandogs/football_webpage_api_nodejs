@@ -1,58 +1,65 @@
 # 🏟️ Football Webpage API - Node.js
 
-**API RESTful desarrollada en Node.js para la gestión de equipos y jugadores de un club de fútbol gallego, con base en Vigo.**
+**A RESTful API built with Node.js for managing teams and players of a Galician football club based in Vigo.**
 
-Este proyecto forma parte del ecosistema de [Football Webpage](https://football-webpage.vercel.app/), una página web construida con React que permite visualizar y administrar datos de un equipo  de fútbol.
+This project is part of the [Football Webpage](https://football-webpage.vercel.app/) ecosystem — a web frontend built with React to visualize and manage football-related data.
 
-La API puede consultarse en producción aquí:  
+You can access the live API here:  
 🔗 [https://football-webpage-api.vercel.app/](https://football-webpage-api.vercel.app/)
 
 ---
 
-## 🚀 ¿De qué va este proyecto?
+## 🚀 What's this project about?
 
-Este proyecto nació como una forma de experimentar con tecnologías modernas como **Node.js** y **React**, desarrollando tanto una **API** como un **frontend web** para simular una gestión básica de contenido relacionada con el fútbol:
+This project was born as an experiment to learn and play around with **Node.js** and **React**, by building both a **backend API** and a **frontend web app** for basic football management:
 
-- Gestión de **jugadores**
-- Gestión de **equipos**
-- Paneles de administración
-- Consultas públicas de datos
+- Manage **players**
+- Manage **teams**
+- Admin dashboard and controls
+- Public data access
 
-Todo enfocado en un equipo gallego con raíces en la ciudad de **Vigo** 🇪🇸⚽
-
----
-
-## 📡 ¿Qué ofrece esta API?
-
-Esta API permite:
-
-- Obtener información de equipos y jugadores
-- Crear, editar y eliminar jugadores o equipos (vía endpoints protegidos o backend privado)
-- Servir datos para el frontend en tiempo real
-
-Los datos están estructurados en JSON y accesibles desde el dominio público. Ideal para ser consumidos desde aplicaciones frontend como React, Vue, etc.
+All themed around a fictional football club from **Galicia**, based in the city of **Vigo**, Spain 🇪🇸⚽
 
 ---
 
-## 🌐 Endpoints destacados
+## 📡 What does this API provide?
 
-> Puedes consultar la API directamente desde el navegador o cualquier cliente REST como Postman o Insomnia.
+This API allows you to:
 
-- `GET /api/teams` – Lista de equipos
-- `GET /api/players` – Lista de jugadores
-- `GET /api/players/:id` – Detalles de un jugador
-- `POST /api/players` – Añadir jugador (requiere backend)
-- `DELETE /api/players/:id` – Eliminar jugador (requiere backend)
+- Retrieve information about teams and players
+- Create, edit, and delete players or teams (via admin/backend routes)
+- Serve real-time football data to the frontend
 
-Más información disponible en la documentación futura o directamente en el código fuente.
+All data is served in clean JSON format and is easily consumable by frontend applications like React, Vue, etc.
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## 🌐 Main Endpoints
+
+> You can query the API directly using a browser, Postman, Insomnia, or any HTTP client.
+
+- `GET /api/teams` – List all teams
+- `GET /api/players` – List all players
+- `GET /api/players/:id` – Get a single player
+- `POST /api/players` – Add a new player (admin only)
+- `DELETE /api/players/:id` – Delete a player (admin only)
+
+More routes and docs to come — or feel free to dive into the source code!
+
+---
+
+## 🛠️ Tech Stack
 
 - **Node.js**
 - **Express.js**
-- **Vercel** para despliegue serverless
+- **Vercel** (for serverless deployment)
 - **MySQL** 
-- **React** para el frontend ([ver proyecto](https://football-webpage.vercel.app/))
+- **React** frontend ([see project](https://football-webpage.vercel.app/))
 
+## 📬 Want to contribute?
+
+All feedback and contributions are welcome! Feel free to open an issue, fork the repo, or just share your thoughts.
+
+---
+
+Thanks for visiting! 💙⚽
