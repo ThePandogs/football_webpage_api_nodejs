@@ -1,4 +1,4 @@
-import { query } from '../utils/db.js';
+import { query, extractInsertId } from '../utils/db.js';
 
 const select = async (filters) => {
     const {
@@ -81,7 +81,8 @@ const insert = async (data) => {
                 imageUrl || null
             ]
         );
-        return { id: results.insertId, ...data };
+        const inserted = extractInsertId(results);
+        return { id: inserted || null, ...data };
     } catch (err) {
         console.error('Error executing the query:', err);
         throw err;

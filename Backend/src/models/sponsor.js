@@ -1,4 +1,4 @@
-import { query } from '../utils/db.js';
+import { query, extractInsertId } from '../utils/db.js';
 
 const getAll = async () => {
     try {
@@ -31,7 +31,8 @@ const create = async (data) => {
     const { name, url, imageUrl, importance } = data;
     try {
         const results = await query('INSERT INTO sponsors (name, url, imageUrl, importance) VALUES (?, ?, ?, ?)', [name, url, imageUrl, importance]);
-        return { id: results.insertId, ...data }; // Retorna el nuevo patrocinador
+        const inserted = extractInsertId(results);
+        return { id: inserted || null, ...data }; // Retorna el nuevo patrocinador
     } catch (err) {
         throw err;
     }

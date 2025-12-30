@@ -9,6 +9,17 @@ import directionRoute from './src/routes/direction.js';
 
 import path from 'path';
 
+// Global error handlers
+process.on('uncaughtException', (error) => {
+  console.error('❌ UNCAUGHT EXCEPTION:', error.message);
+  console.error(error.stack);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ UNHANDLED REJECTION:', reason);
+  console.error(reason?.stack || reason);
+});
+
 const app = express();
 const port = process.env.PORT || 3000;
 
